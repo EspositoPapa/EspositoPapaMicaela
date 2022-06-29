@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<main style="padding: 100px;">
+    <h1>Resultado alumnos</h1>
+
+    {% if bailarin %}
+    <div class="">
+
+        <ul>
+        {% for bailarin in bailarin %}
+        <li><strong>Nombre:</strong> &nbsp;{{bailarin.nombre}}</li>
+        <li><strong>Apellido:</strong> &nbsp;{{bailarin.apellido}}</li>
+        <li><strong>Fecha de inicio:</strong> &nbsp;{{bailarin.activodesde}}</li>
+        <li><strong>Curso:</strong> &nbsp;{{bailarin.curso}}</li>
+        <li><strong>Email:</strong> &nbsp;{{bailarin.email}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p style="color:black; size:25px">No se encontraron resultados</p>
+    {% endif %}   
+    </div>
+</main>
+
+
+{% endblock%}

@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header style="padding: 60px; background-color: lightslategray;">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <br class="my-4">
+                    <h3><i>Base de Datos - Control de accesos e ingresos</i></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+    <!--VISUALIZADOR PROFESORES-->
+    <div class="col-12 col-md-6">
+        <div class="card" style="width: 16rem;">
+            <a href={% url "formprofesore" %} class="btn"><img src={% static 'blogdanzaalas/assets/img/admprofe.JPG' %} class="card-img-top" style="width: 200px;height: 200px;" alt="..."></a>
+            <div class="card-body">
+
+                <h5 class="card-title">PROFESORES</h5>
+            </div>
+        </div>
+    </div>
+    <!--VISUALIZADOR CURSO-->
+    <div class="col-12 col-md-6">
+        <div class="card" style="width: 16rem;">
+            <a href={% url "formcursos" %} class="btn"> <img src={% static 'blogdanzaalas/assets/img/admcursos.JPG' %} class="card-img-top" style="width: 200px;height: 200px;" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">CURSO</h5>
+            </div>
+        </div>
+    </div>
+    <!--VISUALIZADOR ADMINISTRACION-->
+    <div class="col-12 col-md-6">
+        <div class="card" style="width: 16rem;">
+            <a href={% url "registrar" %} class="btn"><img src={% static 'blogdanzaalas/assets/img/adm.JPG' %} class="card-img-top" style="width: 200px;height: 200px;" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">ACCESOS ADM</h5>
+            </div>
+        </div>
+    </div>
+    <!--VISUALIZADOR EVENTOS-->
+    <div class="col-12 col-md-6">
+        <div class="card" style="width: 16rem;">
+            <a href={% url "formeventos" %} class="btn"><img src={% static 'blogdanzaalas/assets/img/admevento.jpg' %} class="card-img-top" style="width: 200px;height: 200px;" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">EVENTOS</h5>            
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

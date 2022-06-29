@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href={% static 'blogdanzaalas/css/styles.css' %} rel="stylesheet" />
+    <title>Comentarios</title>
+</head>
+<body>
+    
+<header class="masthead" style="background-color:cadetblue;padding: 80px;">
+    <div class="container position-relative px-4 px-lg-5">
+        <a class="btn-info" :hover href="{% url 'eventosolidario' %}" style="color: white;size: 30px; "><strong>◀ atrás</strong></a><br>
+        <a class="btn-info" :hover href="{% url 'inicio' %}" style="color: black;size: 30px; "><strong>◀ volver al inicio</strong></a>
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Comentarios de clientes y no clientes</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <h2>Opiniones:</h2>
+    <div class="col-12" style="border: solid grey;">
+        {% for coment in bdcomentario %}
+        <div class="col-12 col-md-6" style="border: solid rgb(126, 199, 199);">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{coment.nombre}}</h5>
+                    <h6 class="card-subtitle mb-2" style="color:orangered;">{{coment.fechacoment}}</h6>
+                    <p class="card-text">{{coment.comentario}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>        
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead" style="background-image:url('/static/blogdanzaalas/assets/img/about-bg.JPG')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Accesos Administrativos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="col container" style="background-color:lightyellow;width: 50%;margin: auto;">
+    <a href="#!"><img class="img-fluid" src={% static 'blogdanzaalas/assets/img/post1-bg.jpg'%} alt="alassalondebaile" /></a>
+        <!-- <form Class="row" action="ingresoevento" method="POST">
+            {% csrf_token %}
+            <h2>Ingresar Eventos:</h2>
+            <label for="fcomienzo">Fecha de inicio:</label>
+            <input type="date" name="fcomienzo">
+            <label for="ffinal">Fecha de cierre:</label>
+            <input type="date" name="ffinal">
+            <label for="detalle">Detalle:</label>
+            <input type="text" name="detalle">
+            <hr>
+            
+            <input class=" btn-primary" type="submit" value="Enviar" style="margin: auto;width: 30%;border-radius: 50rem;padding:5px">
+    
+        </form> -->
+</div>
+{% endblock %}

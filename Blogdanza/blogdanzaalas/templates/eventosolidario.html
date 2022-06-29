@@ -1,0 +1,89 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Evento Solidario</h1>
+                    <h2 class="subheading">Te invitamos a participar todos los Sabados</h2>
+                    <span class="meta">
+                        Posted by
+                        <a href="#!">Alas eventos</a>
+                        20 Mayo, 2022
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h2 class="section-heading">Nunca es tarde para cumplir un sueño y ahora no hay barreras❣</h2>
+                <p>Hace poco tiempo nuestros colaboradoresdecidieron crear algo para que nuestro <strong>ARTE</strong> conecte con más personas, sin importar si su bolsillo no lo acompaña</p>
+                <p>Por eso nuestros profesores dan clases de 30 minutos con ritmos increibles❣❣.</p>
+                <blockquote class="blockquote">Venite!! Volvé tus sueños realidad</blockquote>
+                <p>Y para potenciar esta maravilla de evento, contamos con la compañia de trackfood. Así cargas energias con deliciosas comidas y bebidas❣</p>
+                <h2 class="section-heading">Sabados de Julio y Agosto desde las 19 horas hasta las 21.30 horas</h2>
+                <p>
+                    <ul>
+                        <li>19 horas: Urbano (Prof: Lorena Estocolmo)</li>
+                        <li>19.30 horas: Danza Arabe (Profe: Tamara Perez)</li>
+                        <li>20 horas: Reggueton (Porf: Martin Guzmán)</li>
+                        <li>20.30 horas: Tango/Vals (Profes: María Gomez y Luciano Kermano</li>
+                        <li>21 horas: Jazz Contempo (Profe: Lucila Cali)</li>
+                        <li>21.30 horas: Clown (Profes: Gimena Hortiz y Pamela Canderian </li>
+                    </ul>
+                </p>
+                <a href="#!"><img class="img-fluid" src={% static 'blogdanzaalas/assets/img/EventosolidarioALAS.JPG'%} alt="alassalondebaile" /></a>
+                <span class="caption text-muted">Te esperamos en la plaza de San Justo - traigan agua y abrigo</span>
+                <p>❣❣Les Agradecemos fervorozamente el amor que nos ofrecen y la elección de día a día❣❣.</p>
+                
+                <p>
+                    Placeholder text by
+                    <a href="">Alas</a>
+                    &middot; Images by
+                    <a href="https://www.google.com/maps/uv?pb=!1s0x95bcc738d2e2e749%3A0x3c4f008d25c195ad!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOD_MpiQSVP920-q-inrorgRO7Y_7eLXtHvSqH4%3Dw130-h87-n-k-no!5salas%20danza%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipOD_MpiQSVP920-q-inrorgRO7Y_7eLXtHvSqH4&hl=es-419">Alas</a>
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2>Comentá</h2>
+        <form action="ingresocoment" method="POST">
+            {% csrf_token %}
+            <label for="nombre" style="width:150px;text-align: end;">Nombre:</label>
+            <input type="text" name="nombre"><br>
+            <label for="fechacoment" style="width:150px;text-align: end;">Fecha:</label>
+            <input type="date" name="fechacoment"><br>
+            <label for="comentario" style="width:150px;text-align: end;">Comentario:</label>
+            <input type="text" name="comentario"><br>
+
+            <input type="submit" value="Enviar" style="margin: 10px 0px 0px 145px;
+            width: 205px;
+            border-radius: 50rem;
+            padding:5px">
+        </form>
+        
+        </div>
+    </div>
+</article>
+<a href={% url 'coment' %}>Ver mensajes creados</a>
+<!-- <div class="row">
+    {% for coment in bdcomentario %}
+        <div class="col-12 col-md-6" style="border: solid grey">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+
+                    <h5 class="card-title">{{coment.nombre}} <p class="color: orange; size:15px;">{{coment.fechacoment}}</p></h5>
+                    <p class="card-text"><strong>{{coment.comentario}} hr</strong></p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div> -->
+{% endblock %}

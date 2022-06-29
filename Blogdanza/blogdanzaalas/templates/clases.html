@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead" style="background-image:url('/static/blogdanzaalas/assets/img/ingreso1-bg.JPG')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Nuestras Clases</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="row">
+        {% for clase in bdclase %}
+        <div class="col-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+                <img src={% static 'blogdanzaalas/assets/img/Alas.jpg' %} class="card-img-top" alt="...">
+                <div class="card-body">
+
+                    <h5 class="card-title">{{clase.nombre}}</h5>
+                    <p class="card-text"><strong>{{clase.dia}} {{clase.horario}} hr</strong></p>
+                <a href="formbailarines" class="btn btn-primary">Me quiero unir</a>
+
+                {% if request.user.is_authenticated %}
+                <br>
+                <a href="{% url 'eliminarcurso' clase.id %}"  style="color:red;">Borrar</a>
+                <a href="{% url 'editclase' clase.id %}" style="color:darkorchid">/  Edit</a>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

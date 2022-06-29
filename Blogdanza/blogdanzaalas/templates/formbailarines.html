@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead" style="background-image:url('/static/blogdanzaalas/assets/img/profesionales.JPG')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Únete a ALAS</h1>
+                    <h4>Pres. Juan Domingo Perón 2895 -  San Justo</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="col container" style="background-color:lightyellow;width: 50%;margin: auto;">
+    <form Class="row" action="ingresoestudiantes" method="POST">
+        {% csrf_token %}
+        <h2>Tu formulario:</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido">
+        <label for="email">Email:</label>
+        <input type="email" name="email">
+        <label for="curso">Estilo elegido:</label>
+        <input type="text" name="curso">
+        <label for="activodesde">Fecha comienzo: </label>
+        <input type="date" name="activodesde">
+        <hr>
+        <input class=" btn-primary" type="submit" value="Enviar" style="margin: auto;
+        width: 30%;
+        border-radius: 50rem;
+        padding:5px">
+
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>About me</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{% static 'blogdanzaalas/css/styls.css' %} ">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Esposito Papa, Micaela</span>
+                <a class="btn btn-info" :hover href="{% url 'inicio' %}" style="color: black;size: 30px; margin-bottom: 100px;"><strong>◀ volver</strong></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#web">Creacion de la web</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#video">Video</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Conocimientos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#thanks">Agradecimientos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Esposito Papa
+                        <span class="text-primary">, Micaela </span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Mariano Santamaría - Esq./ Yrigoyen· San Justo, CP 1754 · (011) 5863-1134 ·
+                        <a href="mailto:name@email.com">mikisole122@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">Quieren saber más de mi? Me llamo Micaela Esposito, tengo 27 años y soy de Buenos Aires Argentina.
+                        Decidí por tema de trabajo y autoexigencia hacer la entrega final sola.
+                        Soy principiante en esto de la programación y tengo intereses inclinados al BackOffice.
+                        Me gustaría seguir aprendiendo en base a Data Engeener. Por ahora mis habilidades son basicas, pero algo que me define es amor por el aprendizaje y el esfuerzo que me carateriza.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https//www.linkedin.com/in/micaela-esposito-papa-81a241a1"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/EspositoPapa"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="web">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Creacion de la web</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Introducción</h3>
+                            <div class="subheading mb-3">Desicion de web</div>
+                            <p>Tanto pensar sobre que tema tocaria mi web, decidí hacerla sobre el estudio de danza al cual asisto. La gran mayoría de la información es inventada con el fin de llenar espacios y hacer más llamativo el blog.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Trabajo Final</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Primeros Pasos</h3>
+                            <div class="subheading mb-3">Creacion de estructura</div>
+                            <p>Se creó un <a href="https://miro.com/welcomeonboard/T0tsYWdBSlpqcHlZNmtEMm9vT2x5N1BnbmJGU2xudExRR3lWczNJb2FwWTNBWTZqTFU2QTNrQlJxZ2U1N3BxWnwzNDU4NzY0NTIwNjM3ODI4NzQ4?share_link_id=799075884316">MIRO</a> en donde se pensó una estrutuctura para la creacion de web y sus necesidades.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Estructura</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Creacion de App </h3>
+                            <div class="subheading mb-3"></div>
+                            <p>Se crearon las apps de blogdanzaalas, login, registro y perfiles. La principal, blogdanzaalas, se le puede encontrar los templates, la carpeta 'static' que tiene contenido los css, las imagenes y los js.
+                                 Se creo un .css por cada plantilla descargada, estas son utilizadas en login/aboutme/estructura tipo blog.
+                                En cuanto a la app's restantes cada una tiene el contenido delineado por su nombre y sus respectivas url's agregada a la url principal del proyecto</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Apps</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Programas internos</h3>
+                            <div class="subheading mb-3">Login, CRUD's, Páginas</div>
+                            <p>El proyecto final que realizé contiene: </p>
+                            <ul>
+                                <li>CRUDS de agregar,modificar y eliminar.</li>
+                                <li>Login/Logout</li>
+                                <li>Paginas tipo blog</li>
+                                <li>NavBar, Aboutme, Home</li>
+                                <li>message</li>
+                                <li>registro, Edit perfil</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Objetivos y Necesidades</span></div>
+                        <div class="d-flex flex-column flex-md-row justify-content-between">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Programas internos</h3>
+                                <div class="subheading mb-3">Login, CRUD's, Páginas</div>
+                                <p>Ultimos retoque: </p>
+                                <p>Se termina con la creacion de avatares de manera individual por cada user ingresado, esto se guarda en una carpeta creada a la altura de las apps creadas llamada 'media', la cual al ingresar los avatar (desde el admin de django) se puede visualizar en las vistas.
+                                    Además de agregar un editor de perfil al hacer click en el nombre de usuario, para poder cambiar password o informacion adicional
+                                </p>
+                            </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Retoques finales</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="video">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Video tutorial</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Como funciona la web?</h3>
+                            <div class="subheading mb-3">
+                                <video src={% static 'blogdanzaalas/assets/img/webvido.webm' %} width="640" height="480" controls></video>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jun 2022 - Jul 2022</span></div>
+                    </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Autodidacta/ CoderHouse</div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="thanks">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Agradecimientos</h2>
+                    <p>Quiero agradecer al profesor y a los tutores por la paciencia y la dedicacion, por hacerme entender que si pueo y que con practica y buenos profesionales puedo llegar a ser algo que nunca pense que podría.
+                        Muchas gracias por su esfuerzo e intención y por demostrar que todos con práctica tenemos nuestro valor
+                    </p>
+                    <p class="mb-0"><strong><i>“El verdadero signo de la inteligencia no es el conocimiento sino la imaginación”. Albert Einstein.</i></strong></p>
+                </div>
+            </section>
+            <hr class="m-0" />
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

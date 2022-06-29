@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Nuestros estudiantes</h1>
+                    <h2 class="subheading">Dando todo, con un gran corazón</h2>
+                    <span class="meta">
+                        Mereces lo que sueñas❣❣
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    {% for bailarin in bdbailarin %}
+    <table style="border:10px; margin: 0 auto;width: 1100px;background-color: aquamarine">
+        <tr> 
+            <td><strong>Id</strong></td>&nbsp;  
+            <td><strong>Nombre</strong></td>&nbsp;&nbsp;&nbsp;
+            <td><strong>Curso</strong></td>&nbsp;
+            <td><strong>Email</strong></td>&nbsp;
+            <td><strong>Bailarin ALAS desde: </strong></td>&nbsp;
+        </tr>
+        <tr style="background-color: lightcyan">
+            <td><p>{{bailarin.id}}</p></td>
+            <td>{{bailarin.apellido}} {{bailarin.nombre}}</td>
+            <td>{{bailarin.curso}}</td>
+            <td>{{bailarin.email}}</td>
+            <td>{{bailarin.activodesde}}</td>
+            <td><a href="{% url 'eliminarbailarin' bailarin.id %}" style="color:red;">BORRAR</a></td>
+            <td><a href="{% url 'editalumno' bailarin.id %}" style="color:blueviolet">Modificar</a></td>
+        </tr>
+    </table>
+    {% endfor %}
+    <div>
+        <h1>Buscador de Bailarin</h1>
+        <!-- #Buscador de alumno y entregables-->
+      <form action="buscar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre">
+        <!-- BOTON  -->
+        <input type="submit" value="BUSCAR">
+      </form>
+    </div>
+</main>
+{% endblock %}

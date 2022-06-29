@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1> Ingreso a Base de Datos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <h2>Eventos:</h2>
+    <div class="container">
+    {% for evento in bdevento %}
+    <table style="border:10px; margin: 0 auto; width: 800px;background-color: aquamarine">
+        <tr>
+          <td><strong>Comienzo: </strong></td>&nbsp;
+          <td><strong>Fin: </strong></td>&nbsp;
+          <td><strong>Detalles: </strong></td>&nbsp;
+        </tr>
+        <tr style="background-color: lightcyan">
+          <td>{{evento.fcomienzo}}</td>
+          <td>{{evento.ffinal}}</td>
+          <td>{{evento.detalle}}</td>
+          <td><a href="{% url 'eliminoevento' evento.id %}" >BORRAR</a></td>
+          <td><a href="{% url 'editevento' evento.id %}">MODIFICAR</a></td>
+        </tr>
+    </table>
+    </div>
+    {% endfor %}
+    <br>
+</main>
+{% endblock %}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin de eventos</title>
+</head>
+<body>
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1> Ingreso a Base de Datos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <h2>Eventos:</h2>
+    {% for evento in bdevento %}
+    <table style="border:10px; margin: 0 auto">
+        <tr style="background-color: rgb(142, 241, 186)">
+          <td><strong>Comienzo: </strong></td>&nbsp;
+          <td><strong>Fin: </strong></td>&nbsp;
+          <td><strong>Detalles: </strong></td>&nbsp;
+        </tr>
+        <tr style="background-color: rgb(124, 250, 145)">
+          <td>{{evento.fcomienzo}}</td>
+          <td>{{evento.ffinal}}</td>
+          <td>{{evento.detalle}}</td>
+          <td><a href="">BORRAR</a></td>
+          <td><a href="">MODIFICAR</a></td>
+        </tr>
+    </table>
+    {% endfor %}
+    <br>
+</main>
+<h4>Agregar nuevo eventos</h4>
+<h5>Luego se podrán modificar para colocar en los eventos principales</h5>
+<button>
+    <a href={% url 'formingresos' %}>Agregar</a>
+</button>
+{% endblock %}
+</body>
+</html>

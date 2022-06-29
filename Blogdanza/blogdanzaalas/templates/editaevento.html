@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenioQueCambia %}
+<header class="masthead" style="background-image:url('/static/blogdanzaalas/assets/img/dibujoeditar.JPG')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Edicion</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <form action="{% url 'editevento' evento.id %}" method="POST" style="margin:0;width: 50%; background-color:lightblue ;">
+        {% csrf_token %}
+        <div style:"border: solid black">
+            <p><strong>Datos:</strong></p>
+            <p>Fecha comienzo:</p>
+            {{mi_formulario.fcomienzo}}
+            <p>Fecha Final::</p>
+            {{mi_formulario.ffinal}}
+            <p>Detalle:</p>
+            {{mi_formulario.detalle}}
+     
+            <input class="btn-primary" type="submit" value="ENVIAR">
+        </div> 
+    </form>
+</main>
+
+{% endblock %}
